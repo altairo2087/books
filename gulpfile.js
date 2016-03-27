@@ -167,9 +167,7 @@ var HTML = {
     files: [`${APP_FOLDER}/**/*.jade`, `${APP_FOLDER}/**/*.html`],
     watch() {
         log(`watching html,jade...`);
-        return plugins.watch(this.files, function(){
-            HTML.compile();
-        });
+        return this.compile(plugins.watch(this.files));
     },
     orderedVendorCss() {
         return gulp
