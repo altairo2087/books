@@ -1,0 +1,18 @@
+{
+  "name": "books",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "ruslan <altairo2087@gmail.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
