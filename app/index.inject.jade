@@ -1,12 +1,13 @@
 doctype html
 html(ng-app="app",id="ng-app")
-    head(lang="en")
+    head(app-layout="lang",data-layout-attr="lang")
         base(href="/")
         meta(name="fragment",content="!")
         meta(charset='UTF-8')
         meta(name='viewport',content='initial-scale=1, maximum-scale=1, user-scalable=no')
 
-        title Books app
+        title(app-layout="title")
+        meta(name='Description',app-layout="desc",data-layout-attr="content")
 
         // bower:css
         // endinject

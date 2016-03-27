@@ -1,4 +1,6 @@
 define([
     'angular',
     './app'
-]);
+], function(){
+
+});

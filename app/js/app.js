@@ -2,14 +2,27 @@ define([
     'angular',
     './config',
     './constants',
-    'uiRouter'
+    'uiRouter',
+    'ngAnimate',
+    'ngAria',
+    'ngMessages',
+    'ngMaterial',
+    './controllers/index',
+    './directives/index',
+    './services/index',
+    './models/index'
 ], function (ng, config, constants) {
 
     run.$inject = [];
     function run() {}
 
     var app = angular.module('app', [
-            'ui.router'
+            'ui.router',
+            'ngMaterial',
+            'app.controllers',
+            'app.services',
+            'app.directives',
+            'app.models'
         ])
         .config(config)
         .run(run);

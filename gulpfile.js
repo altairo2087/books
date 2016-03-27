@@ -61,7 +61,8 @@ const ASSETS = {
                 ngMaterial:'angular-material/angular-material.min.js',
                 ngMessages:'angular-messages/angular-messages.min.js',
                 ngResource:'angular-resource/angular-resource.min.js',
-                uiRouter:'angular-ui-router/release/angular-ui-router.min.js'
+                uiRouter:'angular-ui-router/release/angular-ui-router.min.js',
+                lodash: 'lodash/dist/lodash.min.js'
             },
             css: [
                 'angular-material/angular-material.min.css'
@@ -167,7 +168,7 @@ var HTML = {
     watch() {
         log(`watching html,jade...`);
         return plugins.watch(this.files, function(){
-            this.compile();
+            HTML.compile();
         });
     },
     orderedVendorCss() {
@@ -308,9 +309,7 @@ var JS = {
     files: [`${APP_FOLDER}/**/*.coffee`, `${APP_FOLDER}/**/*.js`],
     watch() {
         log('watching js,coffee...');
-        return plugins.watch(this.files, function(){
-            this.compile();
-        });
+        return plugins.watch(this.files, this.compile);
     },
     compile() {
         log('compile js,coffee...');
@@ -377,13 +376,12 @@ function getWebpackConf(min) {
         }
     };
 
-    console.log(conf);
-
     if (min) {
         conf.plugins.push(new webpack.optimize.UglifyJsPlugin({
             sourceMap: true,
-            mangle: false
-        }))
+            mangle: false,
+            compress: false
+        }));
     }
 
     return conf;
