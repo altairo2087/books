@@ -481,7 +481,7 @@ var tasks = {
         action: server
     },
     build: {
-        desc: `build app: '--env [prod|dev]' default 'dev'`,
+        desc: `build app`,
         action: build
     },
     default: {
