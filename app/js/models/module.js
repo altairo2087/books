@@ -1,1 +1,1 @@
-define([], ()=>angular.module('app.models', []))
+define([], ()=>angular.module('app.models', ['ngResource']));

@@ -360,6 +360,12 @@ function getWebpackConf(min) {
                                 replacement(match, p1, offset, string) {
                                     return process.env.APP_DEBUG;
                                 }
+                            },
+                            {
+                                pattern: /<<STORAGE_HOST>>/ig,
+                                replacement(match, p1, offset, string) {
+                                    return process.env.STORAGE_HOST;
+                                }
                             }
                         ]
                     })

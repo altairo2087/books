@@ -1,2 +1,2 @@
 import './catalog.controller'
-import './show.controller'
+import './detail.controller'

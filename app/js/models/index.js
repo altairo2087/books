@@ -1,1 +1,1 @@
-import './book.model'
+import './book.model';

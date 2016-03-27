@@ -1,10 +1,11 @@
 define(['./module'], function (module) {
     "use strict";
-    module.controller('SearchCatsCtrl', SearchCatsCtrl);
+    module.controller('CatalogCtrl', CatalogCtrl);
 
-    SearchCatsCtrl.$inject = [];
+    CatalogCtrl.$inject = ['bookList'];
 
-    function SearchCatsCtrl() {
-
+    function CatalogCtrl(bookList) {
+        var vm = this;
+        vm.books = bookList;
     }
 });

@@ -1,18 +1,30 @@
 define(function () {
     return function ($urlRouterProvider, $locationProvider, $stateProvider) {
-        var bundle;
-
         /**
          * Routes
          */
         var routes = {
             catalog: {
                 url: "/catalog",
-                templateUrl: "tpl/books/index.html"
+                templateUrl: "tpl/books/index.html",
+                controller: 'CatalogCtrl',
+                controllerAs: 'catalog',
+                resolve: {
+                    bookList: function(Book){
+                        return Book.all();
+                    }
+                }
             },
-            'catalogShow': {
+            'catalogDetail': {
                 url: "/catalog/:id",
-                templateUrl: "tpl/books/show.html"
+                templateUrl: "tpl/books/show.html",
+                controller: 'DetailCtrl',
+                controllerAs: 'detail',
+                resolve: {
+                    bookDetail: function(Book, $stateParams){
+                        return Book.find($stateParams.id);
+                    }
+                }
             }
         };
 
