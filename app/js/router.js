@@ -25,6 +25,10 @@ define(function () {
                         return Book.find($stateParams.id);
                     }
                 }
+            },
+            404: {
+                url: "/404",
+                templateUrl: "tpl/404.html"
             }
         };
 

@@ -13,8 +13,12 @@ define([
     './models/index'
 ], function (ng, config, constants) {
 
-    run.$inject = [];
-    function run() {}
+    run.$inject = ['$rootScope', '$state'];
+    function run($rootScope, $state) {
+        $rootScope.$on("$stateChangeError", function() {
+            $state.go('404');
+        });
+    }
 
     var app = angular.module('app', [
             'ui.router',

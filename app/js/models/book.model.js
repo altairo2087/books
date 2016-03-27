@@ -15,6 +15,7 @@ define(['./module', 'ngResource'], function (module) {
                     var out = {
                         id: data.id,
                         title: data.title.default,
+                        desc: data.description.default,
                         cover: data.cover
                     };
                     q.resolve(out);

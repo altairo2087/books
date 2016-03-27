@@ -1,5 +1,7 @@
-md-grid-list(md-cols="2", md-row-height="400px")
+md-grid-list(md-cols="2", md-row-height="400px", ng-cloak)
     md-grid-tile(ng-repeat="book in catalog.books track by book.id")
         section
-            h2 {{::book.title}}
+            h2
+                a(ui-sref="catalogDetail({id:book.id})")
+                    |{{::book.title}}
             img(ng-src="{{::book.cover}}")
