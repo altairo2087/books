@@ -13,6 +13,7 @@ npm install
 
 ---
 Текущая настройка окружения в файле **.env**
+
 Инициализация dotenv окружения через npm
 
 ```javascript
@@ -21,6 +22,8 @@ npm run env:prod
 ```
 ---
 Сборка
+
+файлы из папки app обрабатываются препроцессорами и помещаются в public
 ```javascript
 npm run build
 ```
