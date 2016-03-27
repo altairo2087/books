@@ -9,6 +9,7 @@ npm install
 Папки проекта
 
 **app/** - приложение
+
 **public/** - сборка приложения 
 
 ---
@@ -28,7 +29,7 @@ npm run env:prod
 npm run build
 ```
 ---
-Старт сервера и ватчеров (browser-sync)
+Старт сервера и ватчеров (browser-sync) localhost:3000
 ```javascript
 npm start
 ```
