@@ -1,16 +1,31 @@
 # books
 
+инициализация
+```javascript
 bower install
 npm install
+```
+---
+Папки проекта
 
-* папки
-app - приложение
-public - сборка приложения 
+**app/** - приложение
+**public/** - сборка приложения 
 
-* Инициализация dotenv окружения
+---
+Текущая настройка окружения в файле **.env**
+Инициализация dotenv окружения через npm
+
+```javascript
 npm run env:dev
 npm run env:prod
-
-* работа со сборкой
-npm run build - сборка
-npm start - запуск сервера и старт ватчеров (browser-sync)
+```
+---
+Сборка
+```javascript
+npm run build
+```
+---
+Старт сервера и ватчеров (browser-sync)
+```javascript
+npm start
+```
